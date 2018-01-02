@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        div {
+            margin-top: 150px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title>Search</title>
+    <script type="text/javascript" language="JavaScript">
+        var xhttp;
+
+        function loadXMLDoc(filename) {
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            }
+            else // code for IE5 and IE6
+            {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+        xhttp = loadXMLDoc("이력서.xml");
+        var element = xhttp.documentElement;
+        var y = element.getElementsByTagName("career");
+        console.log(y);
+        var ary = new Array(6);
+        var filename = new Array(10);
+        for (i = 0; i < element.childElementCount; i++) {
+            var y_item = y.item(i);
+            ary[i] = new Array(6);
+            console.log(y_item.childNodes[0].textContent);
+            for (j = 0; j < y_item.childElementCount; j++) {
+                ary[i][j] = y_item.childNodes[2 * j + 1].textContent;
+            }
+        }
+        function button_click() {
+            var input_text = document.getElementById("text").value;
+            if (input_text == "") {
+                alert("검색어를 입력하세요.")
+                return;
+            }
+            console.log(element);
+            //element.childElementCount는 10
+            //y_item.childElementCount는6
+            console.log(ary);
+            console.log(element.childElementCount);
+            var count = 0;
+            var loof = 0;
+            while (count < element.childElementCount) {
+                for (i = 0; i < element.childElementCount; i++) {
+                    //console.log(count);
+                    filename.push(ary[i][0]);
+                    if (ary[i].indexOf(input_text) != -1) {
+                        document.writeln("<!DOCTYPE html> <head><meta charset='utf-8' /><title></title>");
+                        document.writeln("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'></head > <body>");
+                        document.writeln("<ul>");
+                        //console.log("찾음");
+                        //console.log("i는" + i + "인덱스는" + ary[i].indexOf(input_text));
+                        count++;
+                        for (j = 0; j < element.childElementCount; j++) {
+                            if (i == j) {
+                                document.writeln("<li><a href='" + filename[10 + j] + ".html' class='badge badge- primary'>" + input_text + "</a>");
+                            }
+                            else
+                                ;
+                        }
+                        document.writeln("</ul>");
+                        document.writeln("</body></html >");
+                    }
+                    else {
+                        count++;
+                        loof++;
+                    }
+                    // console.log(count);
+                    //검색결과가 없을경우
+                }
+                if (loof == element.childElementCount) {
+                    alert("검색결과가 없습니다");
+                }
+                break;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div style="text-align:center">
+        <form>
+            <h1>이력서 검색하기</h1>
+            <input type="text" id="text" placeholder="검색어를 입력하세요" />
+            <button name="search" class="btn btn-outline-dark" id="button " onclick="button_click();">확인</button>
+        </form>
+    </div>
+    <br /><br /><br />
+    <div style="text-align:center" id="input_form">
+
+    </div>
+</body>
+</html>

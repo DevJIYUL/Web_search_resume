@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resume>
+  <career>
+    <Name>김종훈</Name>
+    <Position>Student</Position>
+    <address>양산시</address>
+    <Brith>1993년</Brith>
+    <E-mail>Kimjonghun@naver.com</E-mail>
+    <major>Computer technology</major>
+  </career>
+  <career>
+    <Name>김형민</Name>
+    <Position>Student</Position>
+    <address>부산광역시</address>
+    <Brith>1994년</Brith>
+    <E-mail>KimHyungMin@naver.com</E-mail>
+    <major>ComputerTechnology</major>
+  </career>
+  <career>
+    <Name>박구삼</Name>
+    <Position>Student</Position>
+    <address>양산시</address>
+    <Brith>1993년</Brith>
+    <E-mail>ParkGuSam@naver.com</E-mail>
+    <major>ComputerTechnology</major>
+  </career>
+  <career>
+    <Name>송민승</Name>
+    <Position>Student</Position>
+    <address>김해시</address>
+    <Brith>1995년</Brith>
+    <E-mail>Songminseung@naver.com</E-mail>
+    <major>Computer technology</major>
+  </career>
+  <career>
+    <Name>신동석</Name>
+    <Position>Professor</Position>
+    <address>부산광역시</address>
+    <Brith>1970년</Brith>
+    <E-mail>SinDongSuk@naver.com</E-mail>
+    <major>Computer technology</major>
+  </career>
+  <career>
+    <Name>이동욱</Name>
+    <Position>Student</Position>
+    <address>김해시</address>
+    <Brith>1995년</Brith>
+    <E-mail>LeeDongOk@naver.com</E-mail>
+    <major>Pharmacy</major>
+  </career>
+  <career>
+    <Name>최윤창</Name>
+    <Position>Student</Position>
+    <address>부산광역시</address>
+    <Brith>1993년</Brith>
+    <E-mail>CheEyunChang@naver.com</E-mail>
+    <major>ComputerTechnology</major>
+  </career>
+  <career>
+    <Name>배정남</Name>
+    <Position>Actor</Position>
+    <address>부산광역시</address>
+    <Brith>1985년</Brith>
+    <E-mail>Baejungnam@naver.com</E-mail>
+    <major>Computer technology</major>
+  </career>
+  <career>
+    <Name>Jake</Name>
+    <Position>Student</Position>
+    <address>부산광역시</address>
+    <Brith>1995년</Brith>
+    <E-mail>Jake@naver.com</E-mail>
+    <major>Computer technology</major>
+  </career>
+  <career>
+    <Name>Sam</Name>
+    <Position>Singer</Position>
+    <address>부산광역시</address>
+    <Brith>1985년</Brith>
+    <E-mail>Sam@naver.com</E-mail>
+    <major>Singer</major>
+  </career>
+</resume>
